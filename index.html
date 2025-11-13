@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Retro Coin Pusher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;background:#071428;color:#fff;font-family:Arial,sans-serif}
+#game-container{width:100vw;height:100vh;overflow:hidden;position:relative}
+#ui-overlay{position:absolute;left:8px;top:8px;z-index:10}
+.btn{background:#2A7BC0;padding:8px 12px;border-radius:8px;cursor:pointer;margin-right:8px;display:inline-block}
+#shop-panel{position:absolute;right:12px;top:12px;background:rgba(0,0,0,0.6);padding:12px;border-radius:10px;display:none;width:220px}
+.shop-item{display:flex;align-items:center;margin-bottom:8px}
+.shop-item img{width:48px;height:48px;margin-right:8px}
+.shop-item button{margin-left:auto}
+#score,#coins{font-weight:bold;margin-right:12px}
+#footer-note{position:absolute;left:12px;bottom:12px;font-size:12px;opacity:0.8}
+</style>
+</head>
+<body>
+<div id="game-container"></div>
+<div id="ui-overlay">
+<span id="score">Score: 0</span>
+<span id="coins">Coins: 0</span>
+<div style="display:inline-block">
+<span class="btn" id="btn-shop">Shop</span>
+<span class="btn" id="btn-reset">Reset</span>
+</div>
+</div>
+<div id="shop-panel">
+<h3 style="margin:0 0 8px 0;">Shop — Skins</h3>
+<div id="shop-items"></div>
+<div style="text-align:right;">
+<span class="btn" id="btn-close-shop">Close</span>
+</div>
+</div>
+<div id="footer-note">Retro coin pusher — no ads — local save</div>
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
